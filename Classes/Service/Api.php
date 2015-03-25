@@ -89,7 +89,7 @@ class Api {
 		// Checks alternate domains
 		if (count($rootLine) > 0) {
 			$urlParts = parse_url($domain);
-			/** @var PageRepository $sysPage */
+			/** @var \TYPO3\CMS\Frontend\Page\PageRepository $sysPage */
 			$sysPage = GeneralUtility::makeInstance('TYPO3\\CMS\\Frontend\\Page\\PageRepository');
 			$page = (array) $sysPage->getPage($pageId);
 			$protocol = 'http';
